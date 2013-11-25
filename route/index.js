@@ -46,6 +46,12 @@ function defineRoute (server, opts) {
                     endpoint: '/bomb?count={n}',
                     description: 'Get multiple random ' + opts.plural,
                     example: 'http://' + host + '/bomb?count=3'
+                },
+                {
+                    method: 'GET',
+                    endpoint: '/count',
+                    description: 'Get the number of available ' + opts.plural,
+                    example: 'http://' + host + '/count'
                 }
             ]   
         });
