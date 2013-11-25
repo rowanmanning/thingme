@@ -19,27 +19,33 @@ function defineRoute (server, opts) {
     });
 
     function handler (req) {
+        var host = req.info.host;
+        var exampleId = (opts.things[0] ? opts.things[0].id : 1);
         req.reply({
             endpoints: [
                 {
                     method: 'GET',
                     endpoint: '/' + opts.plural,
-                    description: 'Get all ' + opts.plural
+                    description: 'Get all ' + opts.plural,
+                    example: 'http://' + host + '/' + opts.plural
                 },
                 {
                     method: 'GET',
                     endpoint: '/' + opts.plural + '/{id}',
-                    description: 'Get a single ' + opts.singular + ' by id'
+                    description: 'Get a single ' + opts.singular + ' by id',
+                    example: 'http://' + host + '/' + opts.plural + '/' + exampleId
                 },
                 {
                     method: 'GET',
                     endpoint: '/random',
-                    description: 'Get a random ' + opts.singular
+                    description: 'Get a random ' + opts.singular,
+                    example: 'http://' + host + '/random'
                 },
                 {
                     method: 'GET',
                     endpoint: '/bomb?count={n}',
-                    description: 'Get multiple random ' + opts.plural
+                    description: 'Get multiple random ' + opts.plural,
+                    example: 'http://' + host + '/bomb?count=3'
                 }
             ]   
         });
