@@ -4,7 +4,7 @@ Thingme
 
 Build web-services for finding and randomizing things, similar to [pugme][pugme]. Thingme generates endpoints for you, and serves static data in an easy-to-consume JSON API.
 
-**Current Version:** *1.0.0-beta.2*  
+**Current Version:** *1.0.0-beta.3*  
 **Build Status:** [![Build Status][travis-img]][travis]  
 **Node Support:** *0.10*
 
