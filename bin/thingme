@@ -2,6 +2,7 @@
 'use strict';
 
 var commander = require('commander');
+var path = require('path');
 var pkg = require('../package.json');
 var thingme = require('..');
 
@@ -27,6 +28,7 @@ function runProgram (program) {
 // Load the config file
 function loadConfigFile (filePath) {
     var config;
+    filePath = path.resolve(filePath);
     try {
         config = require(filePath);
     } catch (err) {
