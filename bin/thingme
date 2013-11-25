@@ -1,0 +1,53 @@
+#!/usr/bin/env node
+'use strict';
+
+var commander = require('commander');
+var pkg = require('../package.json');
+var thingme = require('..');
+
+defineProgram(commander, pkg.version);
+runProgram(commander);
+
+// Define program arguments
+function defineProgram (program, version) {
+    program
+        .version(version)
+        .usage('<config-file>')
+        .parse(process.argv);
+}
+
+// Run the program
+function runProgram (program) {
+    if (program.args.length !== 1) {
+        program.help();
+    }
+    startWebservice(loadConfigFile(program.args[0]));
+}
+
+// Load the config file
+function loadConfigFile (filePath) {
+    var config;
+    try {
+        config = require(filePath);
+    } catch (err) {
+        if (err.code === 'MODULE_NOT_FOUND') {
+            console.log('Error: config file not found')
+        } else {
+            console.log(err.message);
+        }
+        process.exit(1);
+    }
+    return config;
+}
+
+// Start the webservice
+function startWebservice (config) {
+    var ws = thingme(config);
+    ws.start(function (err) {
+        if (err) {
+            console.error('Webservice failed to start: ' + err.message);
+            process.exit(1);
+        }
+        console.log('Webservice started: ' + ws.address);
+    });
+}

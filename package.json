@@ -1,0 +1,27 @@
+{
+	"name": "thingme",
+	"version": "0.0.0",
+
+	"description": "Build web-services for finding and randomizing things",
+	"keywords": [ "web-service" ],
+
+	"author": "Rowan Manning (http://rowanmanning.com/)",
+
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/rowanmanning/thingme.git"
+	},
+	"homepage": "https://github.com/rowanmanning/thingme",
+	"bugs": "https://github.com/rowanmanning/thingme/issues",
+
+	"dependencies": {
+		"commander": "~2.1",
+		"hapi": "~1.20",
+		"underscore": "~1.5"
+	},
+
+	"main": "./lib/thingme.js",
+	"bin": {
+		"thingme": "./bin/thingme"
+	}
+}
