@@ -4,6 +4,8 @@ Thingme
 
 Build web-services for finding and randomizing things, similar to [pugme][pugme]. Thingme generates endpoints for you, and serves static data in an easy-to-consume JSON API.
 
+For an example of a web-service built with Thingme, see http://dogeme.rowanmanning.com/ ([repo][dogeme]).
+
 **Current Version:** *1.0.0-beta.3*  
 **Build Status:** [![Build Status][travis-img]][travis]  
 **Node Support:** *0.10*
@@ -180,6 +182,7 @@ Thingme is licensed under the [MIT][mit] license.
 
 
 
+[dogeme]: https://github.com/rowanmanning/dogeme
 [grunt]: http://gruntjs.com/
 [mit]: http://opensource.org/licenses/mit-license.php
 [node]: http://nodejs.org/
