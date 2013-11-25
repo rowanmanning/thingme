@@ -1,6 +1,6 @@
 {
 	"name": "thingme",
-	"version": "1.0.0-beta.1",
+	"version": "1.0.0-beta.2",
 
 	"description": "Build web-services for finding and randomizing things",
 	"keywords": [ "web-service" ],
