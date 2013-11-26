@@ -113,6 +113,8 @@ ws.start(function (err) {
 });
 ```
 
+As well as the `start` method, the `ws.hapi` property is the [Hapi][hapi] server instance which the web-service will use. You can us this to extend the web-service with your own endpoints.
+
 There is an example application built this way in [`example/javascript`](example/javascript).
 
 
@@ -163,6 +165,7 @@ Thingme is licensed under the [MIT][mit] license.
 
 [dogeme]: https://github.com/rowanmanning/dogeme
 [grunt]: http://gruntjs.com/
+[hapi]: https://github.com/spumko/hapi
 [mit]: http://opensource.org/licenses/mit-license.php
 [node]: http://nodejs.org/
 [pugme]: http://pugme.herokuapp.com/
