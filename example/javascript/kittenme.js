@@ -8,22 +8,18 @@ var ws = thingme({
     plural: 'kittens',
     things: [
         {
-            id: 1,
             title: 'Kitten And Lizard',
             url: 'http://goo.gl/lB7mJE'
         },
         {
-            id: 2,
             title: 'Kitten Hanging On Bed',
             url: 'http://goo.gl/B4mhVl'
         },
         {
-            id: 3,
             title: 'Christmas Kitten',
             url: 'http://goo.gl/zm70m7'
         },
         {
-            id: 4,
             title: 'Kitten In A Tree',
             url: 'http://goo.gl/aOxOcB'
         }

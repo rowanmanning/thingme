@@ -37,23 +37,8 @@ Get all the things as an array.
 ```json
 {
     "things": [
-        {
-            "id": 1,
-            "value": "foo"
-        }
+        "foo"
     ]
-}
-```
-
-#### GET /things/{id}
-Get a single thing by id.
-
-```json
-{
-    "thing": {
-        "id": 1,
-        "value": "foo"
-    }
 }
 ```
 
@@ -62,10 +47,7 @@ Get a random thing.
 
 ```json
 {
-    "thing": {
-        "id": 1,
-        "value": "foo"
-    }
+    "thing": "foo"
 }
 ```
 
@@ -75,10 +57,7 @@ Get {n} random things as an array.
 ```json
 {
     "things": [
-        {
-            "id": 1,
-            "value": "foo"
-        }
+        "foo"
     ]
 }
 ```
@@ -155,7 +134,7 @@ The config object (either in a JSON file, or passed in as a JavaScript object) c
 *(string)* The plural name for the things exposed by your web-service. E.g. "kittens". Default: `things`.
 
 #### things
-*(array[object])* An array of objects which will be the data exposed by the web-service. Each object should ideally have at least an `id` property. Default: `[]`.
+*(array)* An array of things (objects, strings, anything) which will be the data exposed by the web-service. Default: `[]`.
 
 #### things defaultBombCount
 *(number)* The default number of things to return for the `/bomb` endpoint, when no `count` parameter is sent. Default: 5.

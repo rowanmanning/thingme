@@ -20,7 +20,6 @@ function defineRoute (server, opts) {
 
     function handler (req) {
         var host = req.info.host;
-        var exampleId = (opts.things[0] ? opts.things[0].id : 1);
         req.reply({
             endpoints: [
                 {
@@ -28,12 +27,6 @@ function defineRoute (server, opts) {
                     endpoint: '/' + opts.plural,
                     description: 'Get all ' + opts.plural,
                     example: 'http://' + host + '/' + opts.plural
-                },
-                {
-                    method: 'GET',
-                    endpoint: '/' + opts.plural + '/{id}',
-                    description: 'Get a single ' + opts.singular + ' by id',
-                    example: 'http://' + host + '/' + opts.plural + '/' + exampleId
                 },
                 {
                     method: 'GET',
