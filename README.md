@@ -6,6 +6,8 @@ Build web-services for finding and randomizing things, similar to [pugme][pugme]
 
 For an example of a web-service built with Thingme, see http://dogeme.rowanmanning.com/ ([repo][dogeme]).
 
+**⚠️ NOTE: This project is no longer being maintained. If you're interested in taking over maintenance, please contact me.**
+
 **Current Version:** *1.0.0*  
 **Build Status:** [![Build Status][travis-img]][travis]  
 **Node Support:** *0.10*
